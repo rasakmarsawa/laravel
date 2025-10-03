@@ -1,7 +1,7 @@
 # Laravel 12 Basic Tutorial Project
 
 This repository is a **small learning project** built with **Laravel 12**, following step-by-step lessons to understand the core concepts of Laravel development.  
-The project is inspired by [Laravel Daily's From Scratch Lessons](https://laraveldaily.com/lesson/laravel-from-scratch/route-model-binding).  
+The project is inspired by [Laravel Daily's From Scratch Lessons](https://laraveldaily.com/lesson/laravel-from-scratch).  
 
 In addition to Laravel basics, the workflow also introduces **Git branching strategies** (using `master`, `develop`, and `feature/*` branches) to simulate real-world professional development practices.
 
@@ -41,60 +41,61 @@ In addition to Laravel basics, the workflow also introduces **Git branching stra
 
 ---
 
-## 🚀 How to Run
+## 🚀 How to Run (Quick Setup)
 
 1. Clone the repository:
    ```bash
    git clone https://github.com/yourusername/laravel12-tutorial.git
    cd laravel12-tutorial
 
-   composer install
-   npm install && npm run dev
+Install dependencies:
+    ```bash
+    composer install
+    npm install && npm run dev
 
-   cp .env.example .env
-   php artisan key:generate
+Copy .env and run migrations:
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    php artisan migrate
 
-   php artisan migrate
+Start the server:
+    ```bash
+    php artisan serve
 
-   php artisan serve
+Then open http://localhost:8000 🚀
 
-🌿 Git Workflow Example
-
+## 🌿 Git Workflow Example
 This project also simulates a professional Git workflow using branches:
 
 Start from the latest develop branch:
-
-git checkout develop
-git pull
-
+    ```bash
+    git checkout develop
+    git pull
 
 Create a new feature branch:
-
-git checkout -b feature/new-homepage
-
+    ```bash
+    git checkout -b feature/new-homepage
 
 Work on your changes, commit them:
-
-git add .
-git commit -m "Add new homepage layout with Tailwind"
-
+    ```bash
+    git add .
+    git commit -m "Add new homepage layout with Tailwind"
 
 Merge back into develop:
-
-git checkout develop
-git merge feature/new-homepage
-
+    ```bash
+    git checkout develop
+    git merge feature/new-homepage
 
 After testing, merge develop into master for release:
-
-git checkout master
-git merge develop
-
+    ```bash
+    Copy code
+    git checkout master
+    git merge develop
 
 This workflow keeps the main branch (master) always stable, while active work happens in develop and isolated feature/* branches.
 
-📝 Notes
-
+## 📝 Notes
 This project is purely educational and meant to practice:
 
 Laravel 12 basics
@@ -104,3 +105,6 @@ Blade templating
 Database handling with migrations and Eloquent
 
 Clean Git workflows
+
+## 📖 Source
+Tutorial source: Laravel Daily — Laravel From Scratch
