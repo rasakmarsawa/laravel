@@ -48,50 +48,50 @@ In addition to Laravel basics, the workflow also introduces **Git branching stra
    git clone https://github.com/yourusername/laravel12-tutorial.git
    cd laravel12-tutorial
 
-Install dependencies:
-    ```bash
-    composer install
-    npm install && npm run dev
+2. Install dependencies::
+   ```bash
+   composer install
+   npm install && npm run dev
 
-Copy .env and run migrations:
-    ```bash
-    cp .env.example .env
-    php artisan key:generate
-    php artisan migrate
+3. Copy .env and run migrations:
+   ```bash
+   cp .env.example .env
+   php artisan key:generate
+   php artisan migrate
 
-Start the server:
-    ```bash
-    php artisan serve
+4. Start the server:
+   ```bash
+   php artisan serve
 
 Then open http://localhost:8000 🚀
 
 ## 🌿 Git Workflow Example
 This project also simulates a professional Git workflow using branches:
 
-Start from the latest develop branch:
-    ```bash
-    git checkout develop
-    git pull
+1. Start from the latest develop branch:
+   ```bash
+   git checkout develop
+   git pull
 
-Create a new feature branch:
-    ```bash
-    git checkout -b feature/new-homepage
+2. Create a new feature branch:
+   ```bash
+   git checkout -b feature/new-homepage
 
-Work on your changes, commit them:
-    ```bash
-    git add .
-    git commit -m "Add new homepage layout with Tailwind"
+3. Work on your changes, commit them:
+   ```bash
+   git add .
+   git commit -m "Add new homepage layout with Tailwind"
 
-Merge back into develop:
-    ```bash
-    git checkout develop
-    git merge feature/new-homepage
+4. Merge back into develop:
+   ```bash
+   git checkout develop
+   git merge feature/new-homepage
 
-After testing, merge develop into master for release:
-    ```bash
-    Copy code
-    git checkout master
-    git merge develop
+5. After testing, merge develop into master for release:
+   ```bash
+   Copy code
+   git checkout master
+   git merge develop
 
 This workflow keeps the main branch (master) always stable, while active work happens in develop and isolated feature/* branches.
 
