@@ -1,61 +1,106 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# Laravel 12 Basic Tutorial Project
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+This repository is a **small learning project** built with **Laravel 12**, following step-by-step lessons to understand the core concepts of Laravel development.  
+The project is inspired by [Laravel Daily's From Scratch Lessons](https://laraveldaily.com/lesson/laravel-from-scratch/route-model-binding).  
 
-## About Laravel
+In addition to Laravel basics, the workflow also introduces **Git branching strategies** (using `master`, `develop`, and `feature/*` branches) to simulate real-world professional development practices.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📚 Lesson Outline
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Installation, Routes, Blade Pages and Layouts
+1. **Required Tools and Laravel Installation** (6:17)  
+2. **Routing and Creating New Page** (3:12)  
+3. **Tailwind in Laravel: New Homepage Design** (4:45)  
+4. **Navigation and Reusable Main Layout** (5:28)  
 
-## Learning Laravel
+### Viewing Data from Database
+5. **New Design Layout for Blog Project** (2:24)  
+6. **Database Structure and Migrations** (7:34)  
+7. **MVC, DB Queries, and Eloquent Models** (6:49)  
+8. **Eloquent Relations and GET Parameters** (7:27)  
+9. **Route Model Binding with Parameters** (4:56)  
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+---
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+## 🔧 Learning Goals
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+- Setting up a Laravel 12 project from scratch.  
+- Defining routes and creating Blade views.  
+- Using **TailwindCSS** for frontend styling.  
+- Building layouts and navigation with reusable components.  
+- Working with **database migrations** and designing schema.  
+- Understanding **MVC architecture** and querying data with **Eloquent ORM**.  
+- Learning **Eloquent relationships** and passing parameters through routes.  
+- Using **Route Model Binding** to simplify controller logic.  
+- Practicing **Git branching workflow**:
+  - `master` → production-ready branch  
+  - `develop` → active development branch  
+  - `feature/*` → isolated features  
 
-## Laravel Sponsors
+---
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+## 🚀 How to Run
 
-### Premium Partners
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/laravel12-tutorial.git
+   cd laravel12-tutorial
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+   composer install
+   npm install && npm run dev
 
-## Contributing
+   cp .env.example .env
+   php artisan key:generate
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+   php artisan migrate
 
-## Code of Conduct
+   php artisan serve
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+🌿 Git Workflow Example
 
-## Security Vulnerabilities
+This project also simulates a professional Git workflow using branches:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Start from the latest develop branch:
 
-## License
+git checkout develop
+git pull
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+Create a new feature branch:
+
+git checkout -b feature/new-homepage
+
+
+Work on your changes, commit them:
+
+git add .
+git commit -m "Add new homepage layout with Tailwind"
+
+
+Merge back into develop:
+
+git checkout develop
+git merge feature/new-homepage
+
+
+After testing, merge develop into master for release:
+
+git checkout master
+git merge develop
+
+
+This workflow keeps the main branch (master) always stable, while active work happens in develop and isolated feature/* branches.
+
+📝 Notes
+
+This project is purely educational and meant to practice:
+
+Laravel 12 basics
+
+Blade templating
+
+Database handling with migrations and Eloquent
+
+Clean Git workflows
